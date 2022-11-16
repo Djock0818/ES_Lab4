@@ -1,1 +1,5 @@
 # ES_Lab4
+
+Question2.c: This code utilizes the SM clock in order to create a PWM signal. By setting TB0CCR0 = 16384 and TB0CCR1 = 1638, we are able to determine the period. This code uses polling and has a 10% duty cycle and 500ms period. This ideally runs at 2Hz. Our measured values are slightly different and were as follows: Duty cycle = 9.996%, Period = 499.84ms, Frequency = 2.0006Hz. Duty cycle = 500 * 32 = 16384 = period. 10 periods found = 1638.
+
+Question3.c: This code once again uses the SM clock to create a PWM signal. By setting TB0CCR0 = 8192 and keeping TB0CCR1 = 1638, we are able to set the period. This code has duty cycle = 20% and period = 250ms. Calculated Duty Cycle = 20%, Measured = 19.998%. Calculated Period = 250ms, Measured = 250.02ms. Calculated Frequency = 4Hz, Measured = 3.999 Hz. 250ms is half of 500ms therefore we divide the original code by 2. Finally we left the time code for the duty cycle the same since the period was half as long. This makes the duty cycle = 20%.
